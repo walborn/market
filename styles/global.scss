@@ -1,0 +1,27 @@
+@import '~/styles/variables.scss';
+@import '~/styles/fonts.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'YS Text';
+}
+
+textarea {
+  font-size: 16px;
+  font-family: 'YS Text';
+  resize: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,12 @@
+@import '~/styles/variables.scss';
+
+.main {
+  position: relative;
+  display: flow-root;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: scroll;
+}

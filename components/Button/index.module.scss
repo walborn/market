@@ -1,0 +1,53 @@
+@import '~/styles/variables.scss';
+
+$border: transparent;
+$background-green: #02a97a;
+$background-green-hover: darken($background-green, 5);
+$background-green-disabled: #00c78f;
+
+$background-blue: #238cce;
+$background-blue-hover: darken($background-blue, 5);
+$background-blue-disabled: rgba($background-blue, .5);
+
+$background-red: #da3633;
+$background-red-hover: darken($background-red, 5);
+$background-red-disabled: rgba($background-red, .5);
+
+@mixin variant($background, $background-hover, $background-disabled) {
+  display: inline-block;
+  height: 40px;
+  padding: 0 40px;
+  font-size: inherit;
+  line-height: 30px;
+  color: white;
+  background-color: $background;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background .1s ease-in-out;
+  &.disabled {
+    background-color: $background-disabled;
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+  }
+  &:focus {
+    background-color: $background-hover;
+    outline: none;
+  }
+  
+  &:hover {
+    background-color: $background-hover;
+  }
+}
+.root {
+  &.green {
+    @include variant($background-green, $background-green-hover, $background-green-disabled);
+  }
+  &.red {
+    @include variant($background-red, $background-red-hover, $background-red-disabled);
+  }
+  &.blue {
+    @include variant($background-blue, $background-blue-hover, $background-blue-disabled);
+  }
+}

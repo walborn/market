@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  width: 100%;
+  padding: 12px 25px 12px 15px;
+  font-size: inherit;
+  border: 1px solid #e7eaf3;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  &:focus {
+    border-color: #73a9eb;
+  }
+  &::placeholder {
+    color: #95a3b4;
+  }
+}

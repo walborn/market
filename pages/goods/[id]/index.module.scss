@@ -1,0 +1,53 @@
+@import '~/styles/variables.scss';
+
+.root {
+  position: relative;
+  padding: 20px 0;
+  .icon {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    cursor: pointer;
+    fill: #e7e7e9;
+    &:hover {
+      fill: $color-light-gray;
+    }
+    &.delete {
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+    &.duplicate {
+      position: absolute;
+      top: 70px;
+      right: 0;
+    }
+  }
+  .image {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .field {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .textarea {
+    height: 100px;
+  }
+  .submit {
+    margin-bottom: 40px;
+    text-align: center;
+    > *:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  .active {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
